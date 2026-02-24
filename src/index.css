@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-1: #EFE3DF;
+  --color-brand-2: #DCE8E5;
+  --color-brand-3: #C1DAE7;
+  --color-brand-4: #AFD8E4;
+  --color-brand-5: #9DCDE1;
+}
+
+body {
+  @apply bg-[#EFE3DF] text-stone-900 font-sans antialiased select-none;
+  touch-action: manipulation;
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.word-reveal-enter {
+  animation: reveal 0.3s ease-out forwards;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ensure the app takes full height and handles fixed nav */
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+

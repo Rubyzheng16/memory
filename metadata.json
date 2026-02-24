@@ -1,0 +1,5 @@
+{
+  "name": "WordFlow - 智能单词记忆",
+  "description": "基于记忆曲线算法的移动端单词记忆工具，支持自定义词库导入和历史复习。",
+  "requestFramePermissions": []
+}
