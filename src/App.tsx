@@ -440,9 +440,11 @@ export default function App() {
                       {currentWord?.translation}
                     </p>
                     <div className="space-y-2 px-4">
-                      <p className="text-stone-600 italic leading-relaxed text-base">
-                        "{currentWord?.example}"
-                      </p>
+                      {currentWord?.example && (
+                        <p className="text-stone-600 italic leading-relaxed text-base">
+                          "{currentWord.example}"
+                        </p>
+                      )}
                       {currentWord?.exampleTranslation && (
                         <p className="text-stone-400 text-xs">
                           {currentWord.exampleTranslation}
@@ -716,7 +718,7 @@ export default function App() {
               />
               <div className="bg-white rounded-3xl border border-stone-200 p-4 shadow-inner">
                 <textarea 
-                  placeholder="格式：单词 | 中文 | 例句 | 例句翻译"
+                  placeholder="格式：单词 | 中文 (例句和翻译可选)"
                   className="w-full h-40 bg-transparent resize-none focus:outline-none text-stone-600 font-mono text-sm leading-relaxed"
                   value={importText}
                   onChange={(e) => setImportText(e.target.value)}
