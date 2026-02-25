@@ -12,6 +12,24 @@
   --color-brand-5: #9DCDE1;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 body {
   @apply bg-[#EFE3DF] text-stone-900 font-sans antialiased select-none;
   touch-action: manipulation;

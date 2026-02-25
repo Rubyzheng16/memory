@@ -18,7 +18,7 @@ export interface DailyLog {
 }
 
 export interface AppSettings {
-  newWordsPerDay: number;
+  // Settings can be expanded here later
 }
 
 export interface WordBook {
